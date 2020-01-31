@@ -9,4 +9,4 @@
 `v.7.x.x`
 
 ### Integration into Javascript 
-Since `.mat` uses (hdf5)[https://portal.hdfgroup.org/display/HDF5/HDF5], consider to consume the data in-memory using exisitng `hdf5` related js-libs without passing-through the api.
+Since `.mat` uses `[hdf5](https://portal.hdfgroup.org/display/HDF5/HDF5)`, consider to consume the data in-memory using exisitng `hdf5` related js-libs without passing-through the api.
