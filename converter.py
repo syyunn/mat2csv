@@ -1,13 +1,13 @@
 import scipy.io
-import numpy as np
+import pandas as pd
 
-fpath_test_data = './burgers_shock.mat'
+fpath = './burgers_shock.mat'
 
-data = scipy.io.loadmat(fpath_test_data)
-
-for i in data:
-	if '__' not in i and 'readme' not in i:
-		np.savetxt(("filesforyou/"+i+".csv"), data[i], delimiter=',')
+mat = scipy.io.loadmat(fpath)
+mat_dict = {k: v for k, v in mat.items() if k[0] != '_'}
+data = pd.DataFrame({k: pd.Series(v[0]) for k, v in mat_dict.items()})
+data.to_csv("example.csv")
 
 if __name__ == "__main__":
     pass
+
