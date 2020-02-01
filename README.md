@@ -10,3 +10,5 @@
 
 ### Integration into Javascript 
 Since `.mat` uses [hdf5](https://portal.hdfgroup.org/display/HDF5/HDF5), consider to consume the data in-memory using exisitng `hdf5` related js-libs without passing-through the api.
+
+Consider the read `.mat`'s binary directly according to publicly known format of the `.mat` file format - check [this](https://www.mathworks.com/help/pdf_doc/matlab/matfile_format.pdf)
